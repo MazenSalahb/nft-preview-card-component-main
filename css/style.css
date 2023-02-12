@@ -55,18 +55,49 @@ main {
 
 .image {
     padding: 23px 0;
-
+    cursor: pointer;
+    position: relative;
 }
 
-.image img {
+
+
+.head-img {
     width: 100%;
     border-radius: 10px;
     box-shadow:
         5.3px 9px 10.8px -26px rgba(0, 0, 0, 0.071),
         42px 72px 86px -26px rgba(0, 0, 0, 0.14);
+    position: relative;
 }
 
-.text{
+
+.card-view {
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.5);
+    opacity: 0;
+    height: 297.5px;
+    width: 297.5px;
+    top: 23px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+
+.card-view:hover{
+    opacity: 1;
+}
+
+.view-icon {
+    width: 55px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+
+
+.text {
     color: var(--White);
     font-size: 15px;
     display: flex;
@@ -74,56 +105,73 @@ main {
     gap: 20px;
     margin-bottom: 20px;
 }
-.text h2{
+
+.text h2 {
     font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.text p{
+
+.text h2:hover {
+    color: var(--Cyan);
+}
+
+.text p {
     color: var(--Verydarkblueli);
     font-size: 18px;
     line-height: 25px;
 }
 
-.pricesec{
+.pricesec {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--Verydarkblueli);
     margin-bottom: 20px;
 }
-.left, .right{
+
+.left,
+.right {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.price{
+.price {
     color: var(--Cyan);
     padding: 2px;
 }
 
-.pricesec span{
+.pricesec span {
     font-size: 600;
 }
 
-hr{
+hr {
     background-color: var(--Verydarkblueli);
     opacity: 0.1;
-    border-radius:50px ;
+    border-radius: 50px;
     margin-bottom: 20px;
 }
 
-.creator{
+.creator {
     display: flex;
     align-items: center;
     gap: 15px;
     color: var(--Verydarkblueli);
 }
 
-.creator img{
+.creator img {
     width: 30px;
     border: 1px solid var(--White);
     border-radius: 50%;
 }
-.creator span{
+
+.creator span {
     color: var(--White);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.creator span:hover {
+    color: var(--Cyan);
 }
